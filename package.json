@@ -12,6 +12,7 @@
     "LICENSE"
   ],
   "scripts": {
+    "arbentia-mcp-server": "dist/cli/install.js",
     "build": "tsc",
     "dev": "ts-node src/index.ts",
     "start": "node dist/index.js",
