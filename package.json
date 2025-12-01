@@ -4,7 +4,7 @@
   "description": "Model Context Protocol (MCP) server providing intelligent AL (Application Language) code assistance for Microsoft Dynamics 365 Business Central development.",
   "main": "dist/index.js",
   "bin": {
-    "al-mcp-server": "dist/cli/install.js"
+    "arbentia-mcp-server": "dist/cli/install.js"
   },
   "files": [
     "dist/**/*",
