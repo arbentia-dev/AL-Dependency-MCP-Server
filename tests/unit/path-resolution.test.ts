@@ -21,10 +21,10 @@ describe('Cross-Platform Path Resolution', () => {
       
       // Should be absolute path
       expect(path.isAbsolute(cwd)).toBe(true);
-      
+      console.log(`Current working directory: ${cwd}`);
       // Should end with project directory name (handles both local and CI naming)
       expect(cwd).toMatch(/(arbentia-mcp-server|AL-Dependency-MCP-Server)$/);
-      
+      console.log(`CWD ends with expected directory name.`);
       // Should be accessible
       expect(() => process.chdir(cwd)).not.toThrow();
     });

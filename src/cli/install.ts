@@ -25,10 +25,11 @@ class ALMCPInstaller {
   constructor() {
     // Check if running via npx - look for the package name in the path
     // When users run 'npx arbentia-mcp-server', the path will contain the package name
+    console.log("Pre run");
     this.useNpx = process.cwd().includes('_npx') || 
                   __dirname.includes('arbentia-mcp-server') ||
                   process.env.npm_command === 'exec';
-    
+    console.log("Post run");
     // Get the absolute path to this package's server
     this.serverPath = path.resolve(__dirname, '../index.js');
   }
