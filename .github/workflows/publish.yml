@@ -203,7 +203,7 @@ jobs:
             
             **Installation:**
             ```bash
-            npx al-mcp-server@${{ env.NEW_VERSION }}
+            npx arbentia-mcp-server@${{ env.NEW_VERSION }}
             ```
             
             **What's Changed:**

@@ -24,9 +24,9 @@ class ALMCPInstaller {
 
   constructor() {
     // Check if running via npx - look for the package name in the path
-    // When users run 'npx al-mcp-server', the path will contain the package name
+    // When users run 'npx arbentia-mcp-server', the path will contain the package name
     this.useNpx = process.cwd().includes('_npx') || 
-                  __dirname.includes('al-mcp-server') ||
+                  __dirname.includes('arbentia-mcp-server') ||
                   process.env.npm_command === 'exec';
     
     // Get the absolute path to this package's server
@@ -115,7 +115,7 @@ class ALMCPInstaller {
 
       settings['claude.mcpServers'][this.serverName] = this.useNpx ? {
         command: 'npx',
-        args: ['al-mcp-server']
+        args: ['arbentia-mcp-server']
       } : {
         command: 'node',
         args: [this.serverPath]
@@ -154,7 +154,7 @@ class ALMCPInstaller {
       mcpConfig.servers[this.serverName] = this.useNpx ? {
         type: 'stdio',
         command: 'npx',
-        args: ['al-mcp-server']
+        args: ['arbentia-mcp-server']
       } : {
         type: 'stdio',
         command: 'node',
@@ -238,7 +238,7 @@ class ALMCPInstaller {
       "claude.mcpServers": {
         [this.serverName]: {
           command: 'npx',
-          args: ['al-mcp-server']
+          args: ['arbentia-mcp-server']
         }
       }
     } : {
@@ -255,7 +255,7 @@ class ALMCPInstaller {
         [this.serverName]: {
           type: 'stdio',
           command: 'npx',
-          args: ['al-mcp-server']
+          args: ['arbentia-mcp-server']
         }
       }
     } : {
@@ -279,7 +279,7 @@ class ALMCPInstaller {
     console.log('\n🔷 Other Editors:');
     if (this.useNpx) {
       console.log(`Server command: npx`);
-      console.log(`Server args: ["al-mcp-server"]`);
+      console.log(`Server args: ["arbentia-mcp-server"]`);
     } else {
       console.log(`Server command: node`);
       console.log(`Server args: ["${this.serverPath}"]`);
@@ -340,7 +340,7 @@ if (require.main === module) {
     console.log(`
 🚀 AL MCP Server Installer
 
-Usage: al-mcp-server [options]
+Usage: arbentia-mcp-server [options]
 
 Options:
   --help, -h     Show this help message
@@ -348,16 +348,16 @@ Options:
   --ci           Skip installation (CI mode)
   
 Examples:
-  npx al-mcp-server           # Install and configure
-  npx al-mcp-server --help    # Show help
-  npx al-mcp-server --ci      # CI mode (skip installation)
+  npx arbentia-mcp-server           # Install and configure
+  npx arbentia-mcp-server --help    # Show help
+  npx arbentia-mcp-server --ci      # CI mode (skip installation)
 
 Note: When run via MCP protocol (stdin/stdout), automatically starts the server.
 `);
     process.exit(0);
   } else if (args.includes('--version') || args.includes('-v')) {
     const pkg = require('../../package.json');
-    console.log(`al-mcp-server v${pkg.version}`);
+    console.log(`arbentia-mcp-server v${pkg.version}`);
     process.exit(0);
   } else if (args.includes('--ci') || process.env.CI === 'true') {
     console.log('🤖 CI mode detected - skipping installation');

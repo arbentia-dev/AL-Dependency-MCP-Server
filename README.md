@@ -1,6 +1,6 @@
 # AL MCP Server
 
-[![npm version](https://badge.fury.io/js/al-mcp-server.svg)](https://badge.fury.io/js/al-mcp-server)
+[![npm version](https://badge.fury.io/js/arbentia-mcp-server.svg)](https://badge.fury.io/js/arbentia-mcp-server)
 [![CI](https://github.com/StefanMaron/AL-Dependency-MCP-Server/actions/workflows/ci.yml/badge.svg)](https://github.com/StefanMaron/AL-Dependency-MCP-Server/actions/workflows/ci.yml)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
@@ -35,7 +35,7 @@ The AL MCP Server installs automatically via `npx` - no manual installation need
 #### Claude Code (Recommended)
 
 ```bash
-claude mcp add al-mcp-server -- npx al-mcp-server
+claude mcp add arbentia-mcp-server -- npx arbentia-mcp-server
 ```
 
 Or via VS Code settings:
@@ -44,7 +44,7 @@ Or via VS Code settings:
   "claude.mcpServers": {
     "al-symbols-mcp": {
       "command": "npx",
-      "args": ["al-mcp-server"]
+      "args": ["arbentia-mcp-server"]
     }
   }
 }
@@ -59,7 +59,7 @@ Create `.vscode/mcp.json` in your workspace:
     "al-symbols-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["al-mcp-server"]
+      "args": ["arbentia-mcp-server"]
     }
   }
 }
@@ -72,7 +72,7 @@ Add to Cursor settings (Settings → Features → Model Context Protocol):
 {
   "al-symbols-mcp": {
     "command": "npx",
-    "args": ["al-mcp-server"]
+    "args": ["arbentia-mcp-server"]
   }
 }
 ```
@@ -85,7 +85,7 @@ Add to `~/.continue/config.json`:
   "mcpServers": {
     "al-symbols-mcp": {
       "command": "npx",
-      "args": ["al-mcp-server"]
+      "args": ["arbentia-mcp-server"]
     }
   }
 }
@@ -99,7 +99,7 @@ Add to VS Code settings:
   "cody.mcpServers": {
     "al-symbols-mcp": {
       "command": "npx",
-      "args": ["al-mcp-server"]
+      "args": ["arbentia-mcp-server"]
     }
   }
 }
@@ -109,7 +109,7 @@ Add to VS Code settings:
 
 Use these connection details:
 - **Command**: `npx`
-- **Args**: `["al-mcp-server"]`
+- **Args**: `["arbentia-mcp-server"]`
 - **Type**: `stdio`
 
 ### Test It Works

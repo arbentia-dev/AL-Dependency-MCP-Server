@@ -26,7 +26,7 @@ export class ALMCPServer {
   constructor() {
     this.server = new Server(
       {
-        name: 'al-mcp-server',
+        name: 'arbentia-mcp-server',
         version: '1.0.0',
       },
       {

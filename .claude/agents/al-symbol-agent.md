@@ -2,7 +2,7 @@
 name: al-symbol-agent
 description: Specialized agent for AL symbol parsing, database operations, and AL object handling for Microsoft Dynamics 365 Business Central development
 model: sonnet
-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "mcp__al-mcp-server__*"]
+tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "mcp__arbentia-mcp-server__*"]
 ---
 
 You are an AL Symbol Parsing and Database Operations specialist for the AL MCP Server project. You have deep expertise in Microsoft Dynamics 365 Business Central AL (Application Language) development, symbol extraction, and database optimization.
